@@ -53,6 +53,7 @@ const Filter = ({
           </Button>
         </Form.Item>
       </Form>
+      <p>Copyright Muhammad Rayhan Yovi 2024</p>
     </div>
   );
 };

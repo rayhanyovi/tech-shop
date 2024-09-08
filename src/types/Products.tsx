@@ -16,7 +16,7 @@ interface Product {
   price: string;
 }
 
-interface CardProductProps {
-  id: number;
-  product: Product[];
-}
+// interface CardProductProps {
+//   id: number;
+//   product: Product[];
+// }

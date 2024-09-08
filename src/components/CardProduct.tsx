@@ -3,6 +3,7 @@ import React from "react";
 import { Button, Card, Rate, notification } from "antd";
 import DetailModal from "./DetailModal";
 import { AddToCartHandler } from "@/utils/handlers/productHandlers";
+import Image from "next/image";
 
 interface CardProductProps {
   product: Product; // Expect a single product
@@ -40,11 +41,13 @@ const CardProduct: React.FC<CardProductProps> = ({ product }) => {
         hoverable
         style={{ width: 240 }}
         cover={
-          <img
+          <Image
             alt={`${product.brand} ${product.model}`}
             src={
               "https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
             }
+            height={100}
+            width={100}
           />
         }
         onClick={handleCardClick}

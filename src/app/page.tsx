@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Filter from "@/components/Filter";
 import CardProduct from "@/components/CardProduct";
 import { fetchProducts } from "@/utils/handlers/productHandlers";
-import { Button } from "antd";
 
 export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);

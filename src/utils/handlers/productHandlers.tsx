@@ -24,7 +24,7 @@ export async function fetchProducts(
   }
 }
 
-export const AddToCartHandler = (product: any) => {
+export const AddToCartHandler = (product: Product) => {
   const cart = JSON.parse(localStorage.getItem("Cart") || "[]");
   cart.push(product);
   localStorage.setItem("Cart", JSON.stringify(cart));

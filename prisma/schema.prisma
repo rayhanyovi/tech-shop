@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model electronics {
+  id                   Int      @id @default(autoincrement())
+  brand                String?  @db.VarChar(100)
+  model                String?  @db.VarChar(255)
+  screen_size          String?  @db.VarChar(50)
+  color                String?  @db.VarChar(50)
+  harddisk             String?  @db.VarChar(50)
+  cpu                  String?  @db.VarChar(100)
+  ram                  String?  @db.VarChar(50)
+  OS                   String?  @db.VarChar(100)
+  special_features     String?
+  graphics             String?  @db.VarChar(100)
+  graphics_coprocessor String?  @db.VarChar(100)
+  cpu_speed            String?  @db.VarChar(50)
+  rating               Decimal? @db.Decimal(2, 1)
+  price                String?  @db.VarChar(50)
+}

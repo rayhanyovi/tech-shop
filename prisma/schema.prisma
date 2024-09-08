@@ -3,9 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model electronics {
@@ -17,7 +16,7 @@ model electronics {
   harddisk             String?  @db.VarChar(50)
   cpu                  String?  @db.VarChar(100)
   ram                  String?  @db.VarChar(50)
-  OS                   String?  @db.VarChar(100)
+  os                   String?  @db.VarChar(100)
   special_features     String?
   graphics             String?  @db.VarChar(100)
   graphics_coprocessor String?  @db.VarChar(100)
